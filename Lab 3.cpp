@@ -11,13 +11,13 @@
 	deviation in separate functions.
 */
 
-#include <iostream>
-#include <fstream>
-#include <math.h>
+#include <iostream> // Adds the I/O Library
+#include <fstream> // Adds the fstream library
+#include <math.h> // Adds the math library
 
-using namespace std;
+using namespace std; // Dictates the namespace
 
-int main()
+int main() // Initializes everything
 {
 	ifstream infile;
 	infile.open("inMeanSTD.dat"); //Opens a file to pull info from
@@ -37,23 +37,23 @@ int main()
 
 	outfile << "The mean is equal to: " << mean << "\nThe population standard deviation is equal to: " << psd2; // Writes both the Mean and SPD
 
-	int i1, i2, i3, i4;
+	int i1, i2, i3, i4; // Creates the variables for the inputs
 
-	cout << "I need you to give me 4 numbers. What is the first one: ";
+	cout << "I need you to give me 4 numbers. What is the first one: "; // Outputs prompt
 
-	cin >> i1;
+	cin >> i1; // Takes input for the first variable
 
-	cout << "\nWhat is the second number: ";
+	cout << "\nWhat is the second number: "; // Outputs a prompt for a second number
 
-	cin >> i2;
+	cin >> i2; // Takes input for the second variable
 
-	cout << "\nNext what is your third number: ";
+	cout << "\nNext what is your third number: "; // Outputs a prompt for a third number
 
-	cin >> i3;
+	cin >> i3; // Takes input for the third variable
 
-	cout << "\nAnd now what is your final number: ";
+	cout << "\nAnd now what is your final number: " << endl; // Outputs a promt for the fourth and final number
 
-	cin >> i4;
+	cin >> i4; // Takes input for the fourth variable
 
 	float mean2 = (i1 + i2 + i3 + i4) / 4; // Calculates the mean
 
@@ -61,7 +61,7 @@ int main()
 
 	float psdo = pow(psdi, 0.5); // Calculates the population standard deviation
 
-	cout << "Thank you for the numbers, I used them to calculate a mean and population standard deviation." << "\nMean: " << mean2 << "\nPopulation Standard Deviation: " << psdo;
+	cout << "Thank you for the numbers, I used them to calculate a mean and population standard deviation." << "\nMean: " << mean2 << "\nPopulation Standard Deviation: " << psdo; // Outputs the Mean and SPD
 
 	return 0;
 }
